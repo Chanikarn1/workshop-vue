@@ -3,7 +3,7 @@
       <div class="container">
           <div class="mt-5">
             <table class="w-100">
-                <tr>
+                <tr class="font-weight-bold">
                     <td class="text-center">
                       Product 
                     </td>
@@ -24,28 +24,28 @@
                     </td>
                 </tr>
                 <tr v-for="(item,index) in products" :key="index">
-                  <td>
+                  <td class="text-center">
                     {{item.productName}}
                   </td>
-                  <td >
+                  <td  class="text-center">
                     {{item.price}}
                   </td>
-                  <td>
+                  <td  class="text-center">
                     {{item.cost}}
                   </td>
-                  <td v-if="item.amount > 0">
+                  <td v-if="item.amount > 0"  class="text-center">
                     {{item.amount}}
                   </td>
-                  <td v-else>
+                  <td v-else  class="text-center">
                     หมด
                   </td>
-                  <td>
+                  <td  class="text-center">
                       <router-link :to='{name:"editProduct",params:{product_id:item._id}}'>
                         <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size:18px;"></i>
                       </router-link>
                   </td>
-                  <td>
-                    <i class="fa fa-trash" aria-hidden="true" @click="deleteProduct(item,item._id)" style="font-size:18px;"></i>
+                  <td  class="text-center">
+                    <i class="fa fa-trash" aria-hidden="true" @click="deleteProduct(item,item._id)" ></i>
 
                     <!-- <button type="button" class="btn btn-danger" @click="deleteProduct(item,item._id)">ลบ</button> -->
                   </td>
@@ -53,7 +53,7 @@
             </table>
             
           </div>
-          <div class="row text-center">
+          <div class="row justify-content-center mt-5">
                 <router-link :to='{ name:"addProduct" }' >
                   <button type="button" class="btn btn-danger">
                     เพิ่มสินค้า
@@ -128,5 +128,15 @@ a:hover{
 .btn{
   display:block;
   margin:0 auto;
+}
+tr:nth-child(even) {
+  background: #bab3b34a;
+}
+tr td{
+  padding:8px;
+}
+td .fa-trash{
+  cursor:pointer;
+  font-size:18px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <form @submit.prevent="addProduct">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mt-5">
                 <div class="card p-3">  
                     
                 <label>ชื่อสินค้า</label>
@@ -18,7 +18,7 @@
                 </div>
                 {{productName}}
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mt-5">
                     <button type="submit" class="btn btn-danger">เพิ่มสินค้า</button>
             </div>
         </form>

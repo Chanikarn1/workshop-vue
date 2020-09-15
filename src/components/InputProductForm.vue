@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <!-- <form> -->
-            <div class="row justify-content-center">
+            <div class="row justify-content-center my-5">
                 <div class="card p-3">  
                     
                 <label>ชื่อสินค้า</label>
@@ -26,8 +26,7 @@
                 <input type="text" class="input-group-text" v-model="product.sku" > -->
 
                 </div>
-                {{product}}
-             <!-- {{productName}} -->
+              
             </div>
            
         <!-- </form> -->

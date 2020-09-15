@@ -6,7 +6,7 @@
             <div class="row justify-content-center">
                     <button type="submit" class="btn btn-danger" >แก้ไข</button>
             </div>
-            {{product}}
+          
         </form>
     </div>
 </template>
